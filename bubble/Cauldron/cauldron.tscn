@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfht2arimuoss"]
+
+[ext_resource type="Script" path="res://Cauldron/cauldron.gd" id="1_7um7r"]
+[ext_resource type="Texture2D" uid="uid://duha13lffmgvi" path="res://Assets/MagicMarket/Background/Animations/Cauldron.png" id="1_vjn8s"]
+[ext_resource type="PackedScene" uid="uid://b8istgmnsiam2" path="res://Interaction/Interaction area/interaction_area.tscn" id="3_hailj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2ge7"]
+atlas = ExtResource("1_vjn8s")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p73ft"]
+atlas = ExtResource("1_vjn8s")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stwmm"]
+atlas = ExtResource("1_vjn8s")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_365pa"]
+atlas = ExtResource("1_vjn8s")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwdnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2ge7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p73ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stwmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_365pa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpf0m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ob76w"]
+radius = 18.0278
+
+[node name="Cauldron" type="Node2D"]
+script = ExtResource("1_7um7r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mwdnb")
+autoplay = "default"
+frame_progress = 0.544715
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mpf0m")
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_hailj")]
+action_name = "brew"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_ob76w")
