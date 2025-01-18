@@ -41,6 +41,9 @@ offset_top = 58.0
 offset_right = 835.0
 offset_bottom = 243.0
 
+[node name="Item_Display" parent="Inv_UI_Slot/CenterContainer/Panel" index="0"]
+script = null
+
 [node name="TextureRect" type="TextureRect" parent="Inv_UI_Slot/CenterContainer/Panel" index="1"]
 layout_mode = 0
 offset_left = -76.0
@@ -58,6 +61,9 @@ offset_right = 158.0
 offset_bottom = 158.0
 text = "12"
 
+[node name="Label" parent="Inv_UI_Slot/CenterContainer/Panel" index="2"]
+visible = true
+
 [node name="Inv_UI_Slot2" parent="." instance=ExtResource("4_k237p")]
 visible = false
 
@@ -71,6 +77,9 @@ offset_top = 282.0
 offset_right = 839.0
 offset_bottom = 470.0
 
+[node name="Item_Display" parent="Inv_UI_Slot2/CenterContainer/Panel" index="0"]
+script = null
+
 [node name="TextureRect2" type="TextureRect" parent="Inv_UI_Slot2/CenterContainer/Panel" index="1"]
 layout_mode = 0
 offset_left = -78.0
@@ -81,6 +90,9 @@ theme = ExtResource("1_knp1c")
 texture = ExtResource("5_r6rvx")
 script = ExtResource("6_d1dpy")
 modulation = Color(0.939065, 0.972983, 1, 1)
+
+[node name="Label" parent="Inv_UI_Slot2/CenterContainer/Panel" index="2"]
+visible = true
 
 [node name="Inv_UI" parent="." instance=ExtResource("9_ljr4q")]
 offset_left = 240.0
@@ -106,11 +118,28 @@ offset_bottom = -72.5
 grow_horizontal = 2
 scale = Vector2(5, 5)
 
+[node name="Item_Display" parent="Inv_UI/NinePatchRect/GridContainer/Inv_UI_Slot1/CenterContainer/Panel" index="0"]
+script = null
+
+[node name="Label" parent="Inv_UI/NinePatchRect/GridContainer/Inv_UI_Slot1/CenterContainer/Panel" index="1"]
+visible = true
+
 [node name="Sprite2D" parent="Inv_UI" index="1"]
 visible = false
 
 [node name="AnimatedSprite2D" parent="Inv_UI/Sprite2D" index="0"]
 visible = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 49.0
+offset_top = 480.0
+offset_right = 572.0
+offset_bottom = 553.0
+scale = Vector2(2, 2)
+text = "Press I to open the inventory, and must have at least 
+2 item in the inventory to combine"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 

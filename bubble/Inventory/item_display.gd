@@ -43,6 +43,7 @@ func check(slot: InvSlot, index):
 		print("Invalid slot detected at index:", index)
 
 func _get_drag_data(_position):
+	get_tree().change_scene_to_file("res://Scenes/final_cutscene.tscn")
 	print("Slots array after cleanup:", slots)
 	print("Global Slots array after cleanup:", Global.global_slots)
 
