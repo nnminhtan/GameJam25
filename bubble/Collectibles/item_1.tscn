@@ -40,7 +40,7 @@ action_name = "take"
 shape = SubResource("CircleShape2D_e15kg")
 
 [node name="growth_timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]

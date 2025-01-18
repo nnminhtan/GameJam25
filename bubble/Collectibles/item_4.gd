@@ -30,11 +30,12 @@ func _on_interact():
 	if interaction_manager:
 		interaction_manager.unregister_area(interaction_area)
 		
+	interaction_area.is_interactive = false
 	growth_timer.start()
 
 func _on_timer_timeout():
 	animated_sprite_2d.show()
 	collision_shape_2d.disabled = false
 	interaction_area.set_deferred("disabled", false)
-	
+	interaction_area.is_interactive = true
 	state = "not harvested"

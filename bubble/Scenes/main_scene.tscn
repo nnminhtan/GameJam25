@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://x6uv5ee1o44c"]
+[gd_scene load_steps=18 format=4 uid="uid://x6uv5ee1o44c"]
 
 [ext_resource type="Texture2D" uid="uid://dk1om76pgq26n" path="res://Assets/MagicMarket/Background/Tilesets/TilesetFloor.png" id="1_phe22"]
 [ext_resource type="TileSet" uid="uid://va8fdqk5j7a5" path="res://Assets/Tilesets/grass.tres" id="2_b5n2d"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cl3fsqntuwf4n" path="res://Player/player.tscn" id="7_7tps7"]
 [ext_resource type="PackedScene" uid="uid://ht5pxsrj30fr" path="res://Collectibles/item_1.tscn" id="7_8u2ux"]
 [ext_resource type="PackedScene" uid="uid://dfht2arimuoss" path="res://Cauldron/cauldron.tscn" id="7_78rn5"]
+[ext_resource type="PackedScene" uid="uid://c57mw6852ds4q" path="res://Npcs/npc_2.tscn" id="10_n2f1y"]
 [ext_resource type="PackedScene" uid="uid://d00mkvqjhmnr6" path="res://Collectibles/item_2.tscn" id="10_vrsu4"]
 [ext_resource type="PackedScene" uid="uid://d3xvqpf2wv4o6" path="res://Collectibles/item_3.tscn" id="11_qqlqx"]
 [ext_resource type="PackedScene" uid="uid://cgoh73qouj6kf" path="res://Collectibles/item_4.tscn" id="12_v1qh2"]
@@ -304,11 +305,23 @@ position = Vector2(0, -5)
 tile_map_data = PackedByteArray("AAAqABgAAgAHAAMAAAAtABgAAgAFAAMAAAAwABgAAgAGAAMAAAApABwAAgACAAoAAAAoABwAAgAFAAUAAAAvABEAAgAFAAwAAAA=")
 tile_set = ExtResource("6_shtap")
 
+[node name="Item3" parent="Map" instance=ExtResource("11_qqlqx")]
+position = Vector2(1469, 447)
+
 [node name="Cauldron" parent="." instance=ExtResource("7_78rn5")]
 position = Vector2(252, 237)
 
 [node name="Player" parent="." instance=ExtResource("7_7tps7")]
 position = Vector2(281, 235)
+
+[node name="Npcs" type="Node" parent="."]
+
+[node name="Guide" type="Node" parent="Npcs"]
+
+[node name="Npc2" parent="Npcs/Guide" instance=ExtResource("10_n2f1y")]
+position = Vector2(345, 187)
+
+[node name="Villager" type="Node" parent="Npcs"]
 
 [node name="ListItem1" type="Node" parent="."]
 
@@ -327,17 +340,32 @@ position = Vector2(432, 177)
 [node name="ListItem2" type="Node" parent="."]
 
 [node name="Item2" parent="ListItem2" instance=ExtResource("10_vrsu4")]
-position = Vector2(296, 187)
+position = Vector2(484, 483)
+
+[node name="Item3" parent="ListItem2" instance=ExtResource("10_vrsu4")]
+position = Vector2(414, 449)
 
 [node name="ListItem3" type="Node" parent="."]
 
 [node name="Item3" parent="ListItem3" instance=ExtResource("11_qqlqx")]
 position = Vector2(432, 218)
 
+[node name="Item4" parent="ListItem3" instance=ExtResource("11_qqlqx")]
+position = Vector2(468, 219)
+
+[node name="Item5" parent="ListItem3" instance=ExtResource("11_qqlqx")]
+position = Vector2(832, 409)
+
 [node name="ListItem4" type="Node" parent="."]
 
 [node name="Item4" parent="ListItem4" instance=ExtResource("12_v1qh2")]
-position = Vector2(162, 216)
+position = Vector2(1210, 335)
+
+[node name="Item5" parent="ListItem4" instance=ExtResource("12_v1qh2")]
+position = Vector2(1259, 358)
+
+[node name="Item6" parent="ListItem4" instance=ExtResource("12_v1qh2")]
+position = Vector2(1181, 381)
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 

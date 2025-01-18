@@ -9,9 +9,11 @@ var is_interactive : bool = true
 var interact : Callable = func():
 	pass
 
-
 func _on_body_entered(body: Node2D) -> void:
-	InteractionManager.register_area(self)
+	#print(is_interactive)
+	if is_interactive:
+		#print("enter")
+		InteractionManager.register_area(self)
 
 
 func _on_body_exited(body: Node2D) -> void:

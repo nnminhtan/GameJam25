@@ -6,8 +6,7 @@ extends CharacterBody2D
 
 # use for interactive npc
 const lines: Array[String] = [
-	"I'm stuck in this",
-	"Help me step bro"
+	"Can you help me to make a amethyst bubble",
 ]
 
 func _ready() -> void:

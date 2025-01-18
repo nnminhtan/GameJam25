@@ -6,8 +6,18 @@ extends CharacterBody2D
 
 # use for interactive npc
 const lines: Array[String] = [
-	"Tan is gaylord",
-	"Cut his D"
+	"Greetings player",
+	"You are a retired wizard",
+	"That makes colorful bubbles",
+	"To bring happiness for everyone",
+	"To make those",
+	"You have to collect the herbs",
+	"And brew them in the cauldron in front of shack",
+	"For each herbs, it will have it own growth time to collect",
+	"Some is easy to collect like in the garden at your right",
+	"But it will have a decent amount of growth time",
+	"So more further words",
+	"Let's start making bubbles!!!"
 ]
 
 func _ready() -> void:
