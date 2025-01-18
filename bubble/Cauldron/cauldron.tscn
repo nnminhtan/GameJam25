@@ -46,6 +46,7 @@ animations = [{
 radius = 18.0278
 
 [node name="Cauldron" type="Node2D"]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_7um7r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -53,7 +54,7 @@ sprite_frames = SubResource("SpriteFrames_mwdnb")
 autoplay = "default"
 frame_progress = 0.544715
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_mpf0m")

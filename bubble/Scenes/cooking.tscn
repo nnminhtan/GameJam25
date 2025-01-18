@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvt2matkdy1sm"]
+[gd_scene load_steps=8 format=3 uid="uid://cgatomumgmi8v"]
 
 [ext_resource type="Theme" uid="uid://dixexxtobls5e" path="res://Scripts/cooking/theme.tres" id="1_knp1c"]
 [ext_resource type="Script" path="res://Scripts/cooking/panel.gd" id="2_37pwx"]

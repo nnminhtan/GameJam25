@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://ht5pxsrj30fr"]
+
+[ext_resource type="Script" path="res://Collectibles/item_1.gd" id="1_2k6bu"]
+[ext_resource type="Texture2D" uid="uid://dpx6qvhs41kcq" path="res://Assets/Collectibles/Item1.png" id="1_qswgg"]
+[ext_resource type="PackedScene" uid="uid://b8istgmnsiam2" path="res://Interaction/Interaction area/interaction_area.tscn" id="2_atamn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4ack"]
+atlas = ExtResource("1_qswgg")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u01ee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4ack")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e15kg"]
+radius = 80.6226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ihyx8"]
+radius = 20.0
+
+[node name="Item1" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_2k6bu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_u01ee")
+
+[node name="InteractionArea" parent="AnimatedSprite2D" instance=ExtResource("2_atamn")]
+action_name = "take"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/InteractionArea"]
+shape = SubResource("CircleShape2D_e15kg")
+
+[node name="growth_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 15)
+shape = SubResource("CircleShape2D_ihyx8")
+debug_color = Color(0.839423, 0.32254, 0.544185, 0.42)
