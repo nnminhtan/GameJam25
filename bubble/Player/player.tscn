@@ -154,3 +154,6 @@ limit_bottom = 758
 offset_top = -21.0
 offset_right = 1152.0
 offset_bottom = 627.0
+
+[editable path="Inv_UI"]
+[editable path="Inv_UI/NinePatchRect/GridContainer/Inv_UI_Slot1"]

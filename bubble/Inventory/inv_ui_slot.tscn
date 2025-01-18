@@ -28,9 +28,6 @@ layout_mode = 2
 layout_mode = 0
 scale = Vector2(0.1, 0.1)
 script = ExtResource("3_7c0a5")
-modulation = null
-item_type = null
-initial_count = null
 
 [node name="Label" type="Label" parent="CenterContainer/Panel"]
 custom_minimum_size = Vector2(20, 23)
