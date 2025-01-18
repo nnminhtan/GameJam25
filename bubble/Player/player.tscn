@@ -151,7 +151,6 @@ limit_right = 1504
 limit_bottom = 758
 
 [node name="Inv_UI" parent="." instance=ExtResource("5_k3v4n")]
-visible = false
 offset_top = -21.0
 offset_right = 1152.0
 offset_bottom = 627.0
