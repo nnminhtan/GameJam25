@@ -1,0 +1,138 @@
+[gd_scene load_steps=13 format=3 uid="uid://c3orssoelfp7m"]
+
+[ext_resource type="Script" path="res://Inventory/inv_ui.gd" id="1_e0exp"]
+[ext_resource type="Texture2D" uid="uid://fr0ovq5hw5k8" path="res://Assets/Inventory/inventory-background.png" id="2_70aq7"]
+[ext_resource type="PackedScene" uid="uid://dm41t88qnjija" path="res://Inventory/inv_ui_slot.tscn" id="3_4comv"]
+[ext_resource type="Texture2D" uid="uid://dvnkccwfc674n" path="res://Assets/Inventory/inventory-slot.png" id="4_h11bf"]
+[ext_resource type="Texture2D" uid="uid://2xko2cxi3ey1" path="res://Assets/Blue_witch/B_witch_idle.png" id="5_wxiux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiq2m"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2q2nm"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu8rr"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 96, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6j26"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 144, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cewvg"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruwrw"]
+atlas = ExtResource("5_wxiux")
+region = Rect2(0, 240, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqkjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fiq2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2q2nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu8rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6j26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cewvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruwrw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Inv_UI" type="Control"]
+z_index = 5
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0exp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -153.0
+offset_top = -124.0
+offset_right = 153.0
+offset_bottom = 86.0
+texture = ExtResource("2_70aq7")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 113.0
+offset_right = 97.0
+offset_bottom = -41.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+columns = 4
+
+[node name="Inv_UI_Slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Inv_UI_Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_4comv")]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-76, -67)
+scale = Vector2(4.1875, 4.1875)
+texture = ExtResource("4_h11bf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(0.347826, 1.78814e-07)
+scale = Vector2(0.347826, 0.347826)
+sprite_frames = SubResource("SpriteFrames_fqkjy")

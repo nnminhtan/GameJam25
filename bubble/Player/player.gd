@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var inv: Inv
 
 # movement var
 const speed = 100.0

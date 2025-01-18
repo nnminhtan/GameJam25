@@ -1,8 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://cl3fsqntuwf4n"]
+[gd_scene load_steps=22 format=3 uid="uid://cl3fsqntuwf4n"]
 
 [ext_resource type="Texture2D" uid="uid://2xko2cxi3ey1" path="res://Assets/Blue_witch/B_witch_idle.png" id="1_onkqr"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_qrshc"]
 [ext_resource type="Texture2D" uid="uid://c3if7qsdncv54" path="res://Assets/Blue_witch/B_witch_run.png" id="2_ifyw8"]
+[ext_resource type="Resource" uid="uid://12skwu2q85v7" path="res://Inventory/PlayerInv.tres" id="2_jp3rg"]
+[ext_resource type="PackedScene" uid="uid://c3orssoelfp7m" path="res://Inventory/inv_ui.tscn" id="5_k3v4n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwr7k"]
 atlas = ExtResource("1_onkqr")
@@ -129,11 +131,12 @@ y_sort_enabled = true
 position = Vector2(0, -19)
 collision_layer = 2
 script = ExtResource("1_qrshc")
+inv = ExtResource("2_jp3rg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_08gjm")
-animation = &"run"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
@@ -142,3 +145,8 @@ shape = SubResource("CapsuleShape2D_21kb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="Inv_UI" parent="." instance=ExtResource("5_k3v4n")]
+offset_top = -21.0
+offset_right = 1152.0
+offset_bottom = 627.0
