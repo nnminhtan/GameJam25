@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvt2matkdy1sm"]
+
+[ext_resource type="Theme" uid="uid://dixexxtobls5e" path="res://Scripts/cooking/theme.tres" id="1_knp1c"]
+[ext_resource type="Script" path="res://Scripts/cooking/panel.gd" id="2_37pwx"]
+[ext_resource type="Texture2D" uid="uid://b0o65fjkkn8xa" path="res://Assets/AssetsCookingTest/material01.webp" id="3_7nimn"]
+[ext_resource type="Script" path="res://Scripts/cooking/item1.gd" id="4_6231h"]
+[ext_resource type="Texture2D" uid="uid://bomupcrgayanj" path="res://Assets/AssetsCookingTest/material02.webp" id="5_r6rvx"]
+[ext_resource type="Script" path="res://Scripts/cooking/item2.gd" id="6_d1dpy"]
+
+[node name="Cooking" type="Node"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 197.0
+offset_top = 96.0
+offset_right = 505.0
+offset_bottom = 404.0
+theme = ExtResource("1_knp1c")
+script = ExtResource("2_37pwx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 651.0
+offset_top = 59.0
+offset_right = 811.0
+offset_bottom = 219.0
+texture = ExtResource("3_7nimn")
+script = ExtResource("4_6231h")
+modulation = Color(0.934699, 0.974606, 1, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 665.0
+offset_top = 255.0
+offset_right = 825.0
+offset_bottom = 415.0
+theme = ExtResource("1_knp1c")
+texture = ExtResource("5_r6rvx")
+script = ExtResource("6_d1dpy")
+modulation = Color(0.939065, 0.972983, 1, 1)

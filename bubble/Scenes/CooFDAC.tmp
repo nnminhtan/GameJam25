@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq83u3t27j616"]
+
+[ext_resource type="Theme" uid="uid://doejrm8ui702j" path="res://Scripts/Cooking/theme.tres" id="1_oradw"]
+[ext_resource type="Texture2D" uid="uid://b0o65fjkkn8xa" path="res://Assets/AssetsCookingTest/material01.webp" id="3_t2hkl"]
+[ext_resource type="Script" path="res://Scripts/Cooking/item_1.gd" id="4_tagip"]
+
+[node name="Cooking" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 188.0
+offset_top = 146.0
+offset_right = 406.0
+offset_bottom = 348.0
+theme = ExtResource("1_oradw")
+
+[node name="item1" type="TextureRect" parent="."]
+offset_left = 614.0
+offset_top = 129.0
+offset_right = 688.0
+offset_bottom = 197.0
+texture = ExtResource("3_t2hkl")
+expand_mode = 1
+script = ExtResource("4_tagip")

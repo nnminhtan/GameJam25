@@ -23,6 +23,7 @@ DialogManager="*res://Scripts/DialogManager.gd"
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="res://Assets/CURSOR.png"
 
 [global_group]
 

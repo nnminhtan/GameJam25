@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dixexxtobls5e"]
+
+[ext_resource type="Texture2D" uid="uid://df2f450srmsxa" path="res://Assets/AssetsCookingTest/bubble.webp" id="1_ix3m3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3j5r"]
+texture = ExtResource("1_ix3m3")
+texture_margin_left = 0.0201759
+region_rect = Rect2(0, 0, 48, 47)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_n3j5r")
