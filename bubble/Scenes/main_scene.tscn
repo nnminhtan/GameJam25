@@ -314,60 +314,79 @@ position = Vector2(252, 237)
 [node name="Player" parent="." instance=ExtResource("7_7tps7")]
 position = Vector2(281, 235)
 
-[node name="Npcs" type="Node" parent="."]
+[node name="Npcs" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Guide" type="Node" parent="Npcs"]
+[node name="Guide" type="Node2D" parent="Npcs"]
+y_sort_enabled = true
 
 [node name="Npc2" parent="Npcs/Guide" instance=ExtResource("10_n2f1y")]
 position = Vector2(345, 187)
 
-[node name="Villager" type="Node" parent="Npcs"]
+[node name="Villager" type="Node2D" parent="Npcs"]
+y_sort_enabled = true
 
-[node name="ListItem1" type="Node" parent="."]
+[node name="ListItem1" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Item1" parent="ListItem1" instance=ExtResource("7_8u2ux")]
+[node name="Item1" parent="ListItem1" node_paths=PackedStringArray("player") instance=ExtResource("7_8u2ux")]
 position = Vector2(431, 135)
+player = NodePath("../../Player")
 
-[node name="Item2" parent="ListItem1" instance=ExtResource("7_8u2ux")]
+[node name="Item2" parent="ListItem1" node_paths=PackedStringArray("player") instance=ExtResource("7_8u2ux")]
 position = Vector2(465, 135)
+player = NodePath("../../Player")
 
-[node name="Item3" parent="ListItem1" instance=ExtResource("7_8u2ux")]
+[node name="Item3" parent="ListItem1" node_paths=PackedStringArray("player") instance=ExtResource("7_8u2ux")]
 position = Vector2(466, 178)
+player = NodePath("../../Player")
 
-[node name="Item4" parent="ListItem1" instance=ExtResource("7_8u2ux")]
+[node name="Item4" parent="ListItem1" node_paths=PackedStringArray("player") instance=ExtResource("7_8u2ux")]
 position = Vector2(432, 177)
+player = NodePath("../../Player")
 
-[node name="ListItem2" type="Node" parent="."]
+[node name="ListItem2" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Item2" parent="ListItem2" instance=ExtResource("10_vrsu4")]
+[node name="Item2" parent="ListItem2" node_paths=PackedStringArray("player") instance=ExtResource("10_vrsu4")]
 position = Vector2(484, 483)
+player = NodePath("../../Player")
 
-[node name="Item3" parent="ListItem2" instance=ExtResource("10_vrsu4")]
+[node name="Item3" parent="ListItem2" node_paths=PackedStringArray("player") instance=ExtResource("10_vrsu4")]
 position = Vector2(414, 449)
+player = NodePath("../../Player")
 
-[node name="ListItem3" type="Node" parent="."]
+[node name="ListItem3" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Item3" parent="ListItem3" instance=ExtResource("11_qqlqx")]
+[node name="Item3" parent="ListItem3" node_paths=PackedStringArray("player") instance=ExtResource("11_qqlqx")]
 position = Vector2(432, 218)
+player = NodePath("../../Player")
 
-[node name="Item4" parent="ListItem3" instance=ExtResource("11_qqlqx")]
+[node name="Item4" parent="ListItem3" node_paths=PackedStringArray("player") instance=ExtResource("11_qqlqx")]
 position = Vector2(468, 219)
+player = NodePath("../../Player")
 
-[node name="Item5" parent="ListItem3" instance=ExtResource("11_qqlqx")]
+[node name="Item5" parent="ListItem3" node_paths=PackedStringArray("player") instance=ExtResource("11_qqlqx")]
 position = Vector2(832, 409)
+player = NodePath("../../Player")
 
-[node name="ListItem4" type="Node" parent="."]
+[node name="ListItem4" type="Node2D" parent="."]
+y_sort_enabled = true
 
-[node name="Item4" parent="ListItem4" instance=ExtResource("12_v1qh2")]
+[node name="Item4" parent="ListItem4" node_paths=PackedStringArray("player") instance=ExtResource("12_v1qh2")]
 position = Vector2(1210, 335)
+player = NodePath("../../Player")
 
-[node name="Item5" parent="ListItem4" instance=ExtResource("12_v1qh2")]
+[node name="Item5" parent="ListItem4" node_paths=PackedStringArray("player") instance=ExtResource("12_v1qh2")]
 position = Vector2(1259, 358)
+player = NodePath("../../Player")
 
-[node name="Item6" parent="ListItem4" instance=ExtResource("12_v1qh2")]
+[node name="Item6" parent="ListItem4" node_paths=PackedStringArray("player") instance=ExtResource("12_v1qh2")]
 position = Vector2(1181, 381)
+player = NodePath("../../Player")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(5, 0, 68, 89, 299, 90, 495, 90, 566, 91, 639, 97, 639, 213, 642, 323, 644, 427, 644, 447, 714, 449, 722, 351, 722, 277, 721, 202, 747, 192, 758, 157, 772, 155, 768, 126, 789, 126, 787, 96, 769, 94, 769, 63, 800, 59, 800, 1, 1025, 6, 1372, 9, 1513, 6, 1524, 225, 1518, 406, 1515, 520, 1515, 657, 1516, 720, 1369, 723, 1146, 723, 943, 722, 876, 723, 878, 695, 818, 685, 816, 657, 770, 657, 767, 612, 718, 609, 718, 481, 643, 482, 641, 556, 641, 655, 626, 658, 628, 686, 612, 690, 609, 705, 496, 707, 378, 709, 246, 709, 126, 702, 107, 701, 107, 643, 8, 642, 4, 496, 4, 320, 2, 182, 2, 90, 0, 36, 1, -24, -70, 154, -149, 350, -163, 596, -134, 805, 47, 856, 314, 869, 641, 869, 1022, 856, 1390, 843, 1679, 780, 1701, 583, 1739, 389, 1682, 247, 1634, 110, 1555, -45, 1406, -71, 1161, -74, 841, -90, 676, -93, 326, -87, 123, -80, 39, -27)
+polygon = PackedVector2Array(5, 0, 68, 89, 299, 90, 495, 90, 566, 91, 639, 97, 639, 213, 642, 323, 644, 427, 644, 447, 714, 449, 722, 351, 722, 277, 721, 202, 747, 192, 758, 157, 772, 155, 768, 126, 789, 126, 787, 96, 769, 94, 769, 63, 800, 59, 800, 1, 1025, 6, 1372, 9, 1502, 12, 1504, 225, 1501, 413, 1500, 531, 1499, 660, 1500, 723, 1369, 723, 1146, 723, 943, 722, 876, 723, 878, 695, 818, 685, 816, 657, 770, 657, 767, 612, 718, 609, 718, 481, 643, 482, 641, 556, 641, 655, 626, 658, 628, 686, 612, 690, 609, 705, 496, 707, 378, 709, 246, 709, 126, 702, 107, 701, 107, 643, 8, 642, 4, 496, 4, 320, 2, 182, 2, 90, 0, 36, 1, -24, -70, 154, -149, 350, -163, 596, -134, 805, 47, 856, 314, 869, 641, 869, 1022, 856, 1390, 843, 1679, 780, 1701, 583, 1739, 389, 1682, 247, 1634, 110, 1555, -45, 1406, -71, 1161, -74, 841, -90, 676, -93, 326, -87, 123, -80, 39, -27)

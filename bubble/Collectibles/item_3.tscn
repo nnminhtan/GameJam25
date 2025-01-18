@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3xvqpf2wv4o6"]
+[gd_scene load_steps=9 format=3 uid="uid://d3xvqpf2wv4o6"]
 
 [ext_resource type="Texture2D" uid="uid://cr4uj4n786xct" path="res://Assets/Collectibles/Item3.png" id="1_358ea"]
 [ext_resource type="Script" path="res://Collectibles/item_3.gd" id="1_obo7v"]
 [ext_resource type="PackedScene" uid="uid://b8istgmnsiam2" path="res://Interaction/Interaction area/interaction_area.tscn" id="2_47uw6"]
+[ext_resource type="Resource" uid="uid://dieigmvl6848s" path="res://Inventory/Items/Item3.tres" id="2_vpnvt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhi7i"]
 atlas = ExtResource("1_358ea")
@@ -29,6 +30,7 @@ radius = 15.8114
 y_sort_enabled = true
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_obo7v")
+item = ExtResource("2_vpnvt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

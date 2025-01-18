@@ -5,6 +5,10 @@ extends Node2D
 @onready var growth_timer: Timer = $growth_timer
 @onready var collision_shape_2d: CollisionShape2D = $CharacterBody2D/CollisionShape2D
 
+#@export var inv: Inv
+@export var item: InvItem
+@export var player = CharacterBody2D
+
 var state = "harvested" # not harvested and harvested
 var interaction_manager = null
 
@@ -22,12 +26,16 @@ func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
 	growth_timer.connect("timeout", Callable(self, "_on_timer_timeout"))
 
+#func collect(pickupitem):
+	#inv.Insert(pickupitem)
+	
 func _on_interact():
 	sprite.hide()
 	collision_shape_2d.disabled = true
 	interaction_area.set_deferred("disabled", true)
 	state = "harvested"
 	print("+1 item 1")
+	player.collect(item)
 	if interaction_manager:
 		interaction_manager.unregister_area(interaction_area)
 		

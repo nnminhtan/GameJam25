@@ -124,7 +124,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_21kb2"]
 radius = 5.0
-height = 22.0
+height = 14.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
@@ -140,7 +140,7 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, 4)
+position = Vector2(0, 10)
 shape = SubResource("CapsuleShape2D_21kb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]

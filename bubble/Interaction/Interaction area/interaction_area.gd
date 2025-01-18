@@ -2,7 +2,7 @@ extends Area2D
 class_name InteractionArea
 
 @export var action_name : String = "interact"
-
+var player = null
 # variable plan to use for item interact only
 var is_interactive : bool = true 
 

@@ -72,3 +72,7 @@ func get_direction_name(direction):
 	elif direction.y < 0:
 		return "up"
 	return "none"
+
+
+func collect(item):
+	inv.Insert(item)
