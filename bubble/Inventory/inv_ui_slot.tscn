@@ -26,10 +26,16 @@ layout_mode = 2
 
 [node name="Item_Display" type="TextureRect" parent="CenterContainer/Panel"]
 layout_mode = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 152.0
+offset_bottom = 152.0
 scale = Vector2(0.1, 0.1)
+stretch_mode = 3
 script = ExtResource("3_7c0a5")
 
 [node name="Label" type="Label" parent="CenterContainer/Panel"]
+visible = false
 custom_minimum_size = Vector2(20, 23)
 layout_mode = 0
 offset_left = 1.0

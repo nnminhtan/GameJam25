@@ -5,37 +5,37 @@ extends Control
 
 var is_open = false 
 #
-@export var modulation: Color = Color(1, 1, 0.5, 1)
-@export var item_type: String = "item1"  # Add this to identify different items
-@export var initial_count: int = 5  # Add initial count as an export variable
-
-#@onready var count_label = $Label  # Reference to the Label node
-var item_count: int
-
-func set_modulation(value: Color):
-	modulation = value
-	modulate = value
-
-func _get_drag_data(_position):
-	#print($)
-	var icon = TextureRect.new()
-	var preview = Control.new()
-	
-	icon.texture = self.texture
-	icon.position = icon.texture.get_size() * -0.5 if icon.texture else Vector2.ZERO
-	icon.modulate = modulation
-	
-	preview.add_child(icon)
-	preview.z_index = 60
-	set_drag_preview(preview)
-	
-	sad_slots()
-	
-	return {
-		"item_id": "godot_icon",
-		"modulation": modulation,
-		"item_type": item_type  # Include the item type in the drag data
-	}
+#@export var modulation: Color = Color(1, 1, 0.5, 1)
+#@export var item_type: String = "item1"  # Add this to identify different items
+#@export var initial_count: int = 5  # Add initial count as an export variable
+#
+##@onready var count_label = $Label  # Reference to the Label node
+#var item_count: int
+#
+#func set_modulation(value: Color):
+	#modulation = value
+	#modulate = value
+#
+#func _get_drag_data(_position):
+	##print($)
+	#var icon = TextureRect.new()
+	#var preview = Control.new()
+	#
+	#icon.texture = self.texture
+	#icon.position = icon.texture.get_size() * -0.5 if icon.texture else Vector2.ZERO
+	#icon.modulate = modulation
+	#
+	#preview.add_child(icon)
+	#preview.z_index = 60
+	#set_drag_preview(preview)
+	#
+	#sad_slots()
+	#
+	#return {
+		#"item_id": "godot_icon",
+		#"modulation": modulation,
+		#"item_type": item_type  # Include the item type in the drag data
+	#}
 
 func _ready():
 	Global.global_slots = slots  # Store the slots in the global array
@@ -46,6 +46,8 @@ func _ready():
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		slots[i].update(inv.slots[i])
+		Global.global_slots[i] = slots[i]  # Store the slots in the global array
+
 		
 
 func sad_slots():
