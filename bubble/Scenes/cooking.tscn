@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvt2matkdy1sm"]
+[gd_scene load_steps=8 format=3 uid="uid://bvt2matkdy1sm"]
 
 [ext_resource type="Theme" uid="uid://dixexxtobls5e" path="res://Scripts/cooking/theme.tres" id="1_knp1c"]
 [ext_resource type="Script" path="res://Scripts/cooking/panel.gd" id="2_37pwx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/cooking/item1.gd" id="4_6231h"]
 [ext_resource type="Texture2D" uid="uid://bomupcrgayanj" path="res://Assets/AssetsCookingTest/material02.webp" id="5_r6rvx"]
 [ext_resource type="Script" path="res://Scripts/cooking/item2.gd" id="6_d1dpy"]
+[ext_resource type="Script" path="res://Scripts/cooking/backButton.gd" id="7_nea3p"]
 
 [node name="Cooking" type="Node"]
 
@@ -35,3 +36,13 @@ theme = ExtResource("1_knp1c")
 texture = ExtResource("5_r6rvx")
 script = ExtResource("6_d1dpy")
 modulation = Color(0.939065, 0.972983, 1, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 52.0
+text = "Back"
+script = ExtResource("7_nea3p")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

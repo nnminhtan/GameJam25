@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://x6uv5ee1o44c"]
+[gd_scene load_steps=11 format=4 uid="uid://x6uv5ee1o44c"]
 
 [ext_resource type="Texture2D" uid="uid://dk1om76pgq26n" path="res://Assets/MagicMarket/Background/Tilesets/TilesetFloor.png" id="1_phe22"]
 [ext_resource type="TileSet" uid="uid://va8fdqk5j7a5" path="res://Assets/Tilesets/grass.tres" id="2_b5n2d"]
@@ -7,6 +7,7 @@
 [ext_resource type="TileSet" uid="uid://dkvmsnkku0iw1" path="res://Assets/Tilesets/tree.tres" id="5_sodka"]
 [ext_resource type="TileSet" uid="uid://di6i3v1gxtty3" path="res://Assets/Tilesets/HouseAndMisc.tres" id="6_shtap"]
 [ext_resource type="PackedScene" uid="uid://cl3fsqntuwf4n" path="res://Player/player.tscn" id="7_7tps7"]
+[ext_resource type="PackedScene" uid="uid://dfht2arimuoss" path="res://Cauldron/cauldron.tscn" id="8_hsatb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4cmkh"]
 texture = ExtResource("1_phe22")
@@ -175,3 +176,6 @@ tile_set = ExtResource("6_shtap")
 
 [node name="Player" parent="." instance=ExtResource("7_7tps7")]
 position = Vector2(288, 223)
+
+[node name="Cauldron" parent="." instance=ExtResource("8_hsatb")]
+position = Vector2(254, 230)

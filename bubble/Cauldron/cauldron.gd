@@ -11,4 +11,5 @@ func _ready() -> void:
 	interaction_area.interact = Callable(self, "_on_interact")
 	
 func _on_interact():
-	print("interactive!")
+	#print("interactive!")
+	get_tree().change_scene_to_file("res://Scenes/cooking.tscn")
